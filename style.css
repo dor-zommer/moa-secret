@@ -86,7 +86,7 @@ a {
   font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--tobacco);
+  color: var(--pink);
   padding: 8px 13px;
   border: 1px solid transparent;
   border-radius: 6px;
@@ -355,6 +355,10 @@ a {
   color: var(--tobacco-80);
 }
 
+.meta-item svg {
+  stroke: var(--pink);
+}
+
 .accommodation-desc {
   font-size: 16px;
   line-height: 32px;
@@ -377,6 +381,10 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+}
+
+.amenity svg {
+  stroke: var(--pink);
 }
 
 .amenity span {
@@ -728,6 +736,10 @@ a {
 
 .dining-icon {
   margin-bottom: 16px;
+}
+
+.dining-icon svg {
+  stroke: var(--pink);
 }
 
 .dining-card-title {
