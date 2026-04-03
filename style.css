@@ -639,6 +639,7 @@ a {
   background-position: center;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
 }
 
 .dark-card-overlay {
@@ -656,12 +657,12 @@ a {
 }
 
 .dark-title {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 40px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 36px;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 12px;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .dark-subtitle {
