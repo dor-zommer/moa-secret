@@ -21,6 +21,8 @@
   --white-60: rgba(255, 255, 255, 0.6);
   --white-20: rgba(255, 255, 255, 0.2);
   --white-10: rgba(255, 255, 255, 0.1);
+  --pink: #E91E8C;
+  --pink-20: rgba(233, 30, 140, 0.2);
 
   --font-body: 'Heebo', sans-serif;
   --font-serif: 'Playfair Display', serif;
@@ -84,15 +86,16 @@ a {
   font-weight: 400;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: var(--tobacco);
+  color: var(--pink);
   padding: 8px 13px;
   border: 1px solid transparent;
   border-radius: 6px;
-  transition: background 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
 
 .nav-btn:hover {
-  background: rgba(113, 81, 65, 0.05);
+  color: var(--pink);
+  background: rgba(113, 81, 65, 0.03);
 }
 
 .header-logo {
@@ -121,8 +124,6 @@ a {
 .hero-slideshow {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .hero-slide {
@@ -132,7 +133,7 @@ a {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.2s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .hero-slide--active {
@@ -164,7 +165,7 @@ a {
 .hero-logo-wrap {
   width: 300px;
   height: 300px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .hero-logo-img {
@@ -227,7 +228,7 @@ a {
 }
 
 .date-input:focus {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: var(--pink-20);
 }
 
 .date-input::-webkit-calendar-picker-indicator {
@@ -239,6 +240,11 @@ a {
 .hero-scroll {
   display: flex;
   animation: bounce 2s infinite;
+  transition: color 0.2s;
+}
+
+.hero-scroll:hover svg {
+  stroke: var(--pink);
 }
 
 @keyframes bounce {
@@ -325,22 +331,6 @@ a {
   object-fit: cover;
 }
 
-/* ========== Breathing Images ========== */
-.breathing-img {
-  width: 100%;
-  height: 50vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-  .breathing-img {
-    background-attachment: scroll;
-    height: 40vh;
-  }
-}
-
 /* ========== Accommodation ========== */
 .accommodation {
   padding: 100px 24px;
@@ -365,6 +355,10 @@ a {
   color: var(--tobacco-80);
 }
 
+.meta-item svg {
+  stroke: var(--pink);
+}
+
 .accommodation-desc {
   font-size: 16px;
   line-height: 32px;
@@ -376,9 +370,9 @@ a {
 /* ========== Amenities ========== */
 .amenities {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 24px 16px;
-  max-width: 1024px;
+  max-width: 1152px;
   margin: 0 auto 48px;
 }
 
@@ -387,6 +381,10 @@ a {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+}
+
+.amenity svg {
+  stroke: var(--pink);
 }
 
 .amenity span {
@@ -454,14 +452,43 @@ a {
 }
 
 .book-btn:hover {
-  background: var(--millbrook);
+  background: var(--pink);
+  border-color: var(--pink);
 }
+
 
 .book-btn:active {
   transform: scale(0.98);
 }
 
-/* ========== Gallery ========== */
+/* ========== Gallery Grid ========== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.gallery-grid-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-grid-img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+.gallery-grid-img--wide {
+  grid-column: span 2;
+  aspect-ratio: 2 / 1;
+}
+
+/* ========== Gallery (legacy) ========== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -474,20 +501,12 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  overflow: hidden;
-  border-radius: 4px;
 }
 
 .gallery-img {
   width: 100%;
   border-radius: 4px;
   object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
-}
-
-.gallery-img:hover {
-  transform: scale(1.03);
-  filter: brightness(1.05);
 }
 
 .gallery-img--tall {
@@ -530,7 +549,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  overflow: hidden;
 }
 
 .exp-col--1 .gallery-img:first-child {
@@ -557,124 +575,179 @@ a {
   aspect-ratio: 280 / 285;
 }
 
-/* ========== Dark Section ========== */
+/* ========== Film Gallery ========== */
+.film-gallery {
+  padding: 100px 24px;
+  max-width: 1152px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid var(--wafer);
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 48px;
+}
+
+.film-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.film-img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 768px) {
+  .film-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .film-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+}
+
+/* ========== Dark Section — 3 Cards ========== */
 .dark-section {
   background: #1e1e1e;
   color: #fff;
   overflow: hidden;
 }
 
-.dark-panels {
+.dark-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.dark-panel {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.dark-card {
+  position: relative;
   min-height: 500px;
-}
-
-.dark-panel-img {
-  overflow: hidden;
-}
-
-.dark-panel-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.dark-panel-text {
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px 64px;
-  text-align: right;
+  align-items: flex-end;
+}
+
+.dark-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.05) 100%);
+}
+
+.dark-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 32px;
+  text-align: center;
+  width: 100%;
 }
 
 .dark-title {
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 48px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 16px;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
   line-height: 1.1;
 }
 
 .dark-subtitle {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
-  line-height: 28px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 12px;
-}
-
-.dark-quote {
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 26px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.dark-desc {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 28px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 24px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 16px;
 }
 
 .dark-tags {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .dark-tag {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 13px;
+  gap: 4px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
 }
 
 .dark-tag-icon {
-  color: #E91E8C;
-  font-size: 14px;
+  color: var(--pink);
+  font-size: 13px;
 }
 
 @media (max-width: 768px) {
-  .dark-panel {
+  .dark-cards {
     grid-template-columns: 1fr;
-    min-height: auto;
   }
 
-  .dark-panel-img {
-    height: 300px;
+  .dark-card {
+    min-height: 350px;
   }
+}
 
-  .dark-panel-text {
-    padding: 40px 24px;
-    text-align: center;
-  }
+/* ========== CTA Section ========== */
+.cta-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 24px;
+  text-align: center;
+}
 
-  .dark-title {
-    font-size: 36px;
-  }
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
 
-  .dark-tags {
-    justify-content: center;
-  }
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  .dark-panel:nth-child(2) .dark-panel-text {
-    order: 2;
-  }
+.cta-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--white);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
 
-  .dark-panel:nth-child(2) .dark-panel-img {
-    order: 1;
-  }
+.cta-subtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.cta-policy {
+  margin-top: 32px;
+}
+
+.cta-policy p {
+  font-size: 12px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.35);
 }
 
 /* ========== Dining ========== */
@@ -703,6 +776,10 @@ a {
 
 .dining-icon {
   margin-bottom: 16px;
+}
+
+.dining-icon svg {
+  stroke: var(--pink);
 }
 
 .dining-card-title {
@@ -738,8 +815,9 @@ a {
 }
 
 .restaurants-btn:hover {
-  background: var(--tobacco);
-  color: var(--pampas-bg);
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--white);
 }
 
 /* ========== Modal ========== */
@@ -836,6 +914,99 @@ a {
   font-style: italic;
 }
 
+/* ========== Booking Bar ========== */
+.booking-bar {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 24px;
+}
+
+.booking-bar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.booking-bar-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.booking-bar-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 160px;
+}
+
+.booking-bar-label {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--white-60);
+  text-align: center;
+}
+
+.booking-bar-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.booking-bar-input:focus {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.booking-bar-select {
+  appearance: none;
+  cursor: pointer;
+}
+
+.booking-bar-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.booking-bar-btn {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--pampas-bg);
+  background: var(--toast);
+  border: none;
+  border-radius: 6px;
+  padding: 14px 40px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.booking-bar-btn:hover {
+  background: var(--pink);
+}
+
+
+
 /* ========== Footer ========== */
 .footer {
   padding: 64px 24px;
@@ -896,7 +1067,7 @@ a {
 }
 
 .footer-link:hover {
-  color: var(--toast);
+  color: var(--pink);
 }
 
 .footer-map {
@@ -960,19 +1131,20 @@ a {
   border-top: 1px solid rgba(113, 81, 65, 0.1);
 }
 
+/* ========== Scroll Animations ========== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* ========== Responsive ========== */
 @media (max-width: 768px) {
-  .about-inner {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .about-text-col,
-  .about-text-col .section-label,
-  .about-text-col .section-title {
-    text-align: center;
-  }
-
   .header {
     height: 64px;
   }
@@ -1006,6 +1178,14 @@ a {
   .amenities {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 12px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid-img--wide {
+    grid-column: span 2;
   }
 
   .gallery {
@@ -1054,6 +1234,36 @@ a {
   .book-btn {
     width: 100%;
   }
+
+  .booking-bar-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .booking-bar-field {
+    min-width: auto;
+  }
+
+  .booking-bar-btn {
+    width: 100%;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-text-col,
+  .about-text-col .section-label,
+  .about-text-col .section-title {
+    text-align: center;
+  }
+
+  .breathing-img {
+    background-attachment: scroll;
+    height: 40vh;
+  }
+
 
   .dining-grid {
     grid-template-columns: 1fr;

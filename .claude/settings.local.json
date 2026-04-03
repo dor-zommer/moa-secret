@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma__get_design_context",
+      "Bash(git add:*)",
+      "Bash(git commit -m ':*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(rm /users/dorzommer/Documents/moa-secret/.git/index.lock)",
+      "Bash(git -C /users/dorzommer/Documents/moa-secret checkout redesign)",
+      "Bash(git -C /Users/dorzommer/Documents/moa-secret checkout redesign)",
+      "Bash(git -C /Users/dorzommer/Documents/moa-secret branch -a)",
+      "Bash(git -C /Users/dorzommer/Documents/moa-secret status)",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__navigate_page",
+      "mcp__plugin_chrome-devtools-mcp_chrome-devtools__list_pages",
+      "Bash(ls \"/Users/dorzommer/Documents/moa-secret/assets/film/\"*.jpg)",
+      "Bash(mv \"אווירה\" atmosphere)",
+      "Bash(mv \"הבקתה\" cabin)",
+      "Bash(mv \"היד \" hand)",
+      "Bash(mv \"חוויה \" experience)",
+      "Bash(mv \"לא לשימוש\" unused)"
+    ]
+  }
+}
