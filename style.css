@@ -530,6 +530,49 @@ a {
   aspect-ratio: 280 / 285;
 }
 
+/* ========== Film Gallery ========== */
+.film-gallery {
+  padding: 100px 24px;
+  max-width: 1152px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px solid var(--wafer);
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 48px;
+}
+
+.film-img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.film-img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+@media (max-width: 768px) {
+  .film-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .film-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+  }
+}
+
 /* ========== Dark Section ========== */
 .dark-section {
   background: #1e1e1e;
