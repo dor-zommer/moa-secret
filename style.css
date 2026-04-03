@@ -21,6 +21,8 @@
   --white-60: rgba(255, 255, 255, 0.6);
   --white-20: rgba(255, 255, 255, 0.2);
   --white-10: rgba(255, 255, 255, 0.1);
+  --pink: #E91E8C;
+  --pink-20: rgba(233, 30, 140, 0.2);
 
   --font-body: 'Heebo', sans-serif;
   --font-serif: 'Playfair Display', serif;
@@ -88,11 +90,12 @@ a {
   padding: 8px 13px;
   border: 1px solid transparent;
   border-radius: 6px;
-  transition: background 0.2s;
+  transition: color 0.2s, background 0.2s;
 }
 
 .nav-btn:hover {
-  background: rgba(113, 81, 65, 0.05);
+  color: var(--pink);
+  background: rgba(113, 81, 65, 0.03);
 }
 
 .header-logo {
@@ -225,7 +228,7 @@ a {
 }
 
 .date-input:focus {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: var(--pink-20);
 }
 
 .date-input::-webkit-calendar-picker-indicator {
@@ -237,6 +240,11 @@ a {
 .hero-scroll {
   display: flex;
   animation: bounce 2s infinite;
+  transition: color 0.2s;
+}
+
+.hero-scroll:hover svg {
+  stroke: var(--pink);
 }
 
 @keyframes bounce {
@@ -436,7 +444,8 @@ a {
 }
 
 .book-btn:hover {
-  background: var(--millbrook);
+  background: var(--pink);
+  border-color: var(--pink);
 }
 
 .book-btn:active {
@@ -754,8 +763,9 @@ a {
 }
 
 .restaurants-btn:hover {
-  background: var(--tobacco);
-  color: var(--pampas-bg);
+  background: var(--pink);
+  border-color: var(--pink);
+  color: var(--white);
 }
 
 /* ========== Modal ========== */
@@ -940,7 +950,7 @@ a {
 }
 
 .booking-bar-btn:hover {
-  background: var(--tobacco);
+  background: var(--pink);
 }
 
 /* ========== Practical Info ========== */
@@ -1053,7 +1063,7 @@ a {
 }
 
 .footer-link:hover {
-  color: var(--toast);
+  color: var(--pink);
 }
 
 .footer-map {
