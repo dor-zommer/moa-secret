@@ -245,40 +245,31 @@
 
   <!-- Dark Section -->
   <section class="dark-section">
-    <div class="dark-panels">
-      <div class="dark-panel fade-in">
-        <div class="dark-panel-img">
-          <img src="assets/film/000009720035.jpg" alt="שקיעה במדבר" loading="lazy">
-        </div>
-        <div class="dark-panel-text">
+    <div class="dark-cards fade-in">
+      <div class="dark-card" style="background-image: url('assets/film/000009720035.jpg')">
+        <div class="dark-card-overlay"></div>
+        <div class="dark-card-content">
           <h2 class="dark-title">שקט</h2>
-          <p class="dark-subtitle">התבודדות מדברית. פרטיות מוחלטת. אוויר לנשימה.</p>
-          <p class="dark-quote">מתי הצלחת בפעם האחרונה לשמוע את הנשימות של עצמך?</p>
+          <p class="dark-subtitle">התבודדות מדברית.<br>פרטיות מוחלטת.<br>אוויר לנשימה.</p>
         </div>
       </div>
-      <div class="dark-panel fade-in">
-        <div class="dark-panel-text">
+      <div class="dark-card" style="background-image: url('assets/film/000009730008.jpg')">
+        <div class="dark-card-overlay"></div>
+        <div class="dark-card-content">
           <h2 class="dark-title">זה סוד</h2>
-          <p class="dark-subtitle">מבודד. מוסתר. יחיד ומיוחד.</p>
-          <p class="dark-desc">צימר אחד, בלבד. רק אתם והבריאה.</p>
+          <p class="dark-subtitle">צימר אחד בלבד.<br>רק אתם והמדבר.</p>
           <div class="dark-tags">
-            <span class="dark-tag"><span class="dark-tag-icon">&#10006;</span> ניתוק דיגיטלי</span>
-            <span class="dark-tag"><span class="dark-tag-icon">&hearts;</span> פרטיות מוחלטת</span>
-            <span class="dark-tag"><span class="dark-tag-icon">&#9790;</span> שקט מוחלט</span>
+            <span class="dark-tag"><span class="dark-tag-icon">&#10006;</span> ניתוק</span>
+            <span class="dark-tag"><span class="dark-tag-icon">&hearts;</span> פרטיות</span>
+            <span class="dark-tag"><span class="dark-tag-icon">&#9790;</span> שקט</span>
           </div>
         </div>
-        <div class="dark-panel-img">
-          <img src="assets/film/000009730008.jpg" alt="פסל היד במדבר" loading="lazy">
-        </div>
       </div>
-      <div class="dark-panel fade-in">
-        <div class="dark-panel-img">
-          <img src="assets/film/000009720027.jpg" alt="נווה מדבר" loading="lazy">
-        </div>
-        <div class="dark-panel-text">
+      <div class="dark-card" style="background-image: url('assets/film/000009720027.jpg')">
+        <div class="dark-card-overlay"></div>
+        <div class="dark-card-content">
           <h2 class="dark-title">בינינו</h2>
-          <p class="dark-subtitle">האט טאב בערב. שכשוכית במהלך היום. מדבר. שקט.</p>
-          <p class="dark-quote">יודעים לשמור סוד?</p>
+          <p class="dark-subtitle">האט טאב בערב.<br>שכשוכית ביום.<br>יודעים לשמור סוד?</p>
         </div>
       </div>
     </div>
@@ -317,27 +308,35 @@
     </button>
   </section>
 
-  <!-- Booking Bar -->
-  <section class="booking-bar" style="background-image: url('assets/film/000009730015.jpg')">
-    <div class="booking-bar-overlay"></div>
-    <div class="booking-bar-inner">
-      <div class="booking-bar-field">
-        <label class="booking-bar-label">כניסה</label>
-        <input type="date" class="booking-bar-input" aria-label="תאריך כניסה">
+  <!-- Booking + Info -->
+  <section class="cta-section" style="background-image: url('assets/film/000009730015.jpg')">
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+      <h2 class="cta-title">הזמינו את השקט שלכם</h2>
+      <p class="cta-subtitle">צ׳ק אין 15:00 &middot; צ׳ק אאוט 11:00</p>
+      <div class="booking-bar-inner">
+        <div class="booking-bar-field">
+          <label class="booking-bar-label">כניסה</label>
+          <input type="date" class="booking-bar-input" aria-label="תאריך כניסה">
+        </div>
+        <div class="booking-bar-field">
+          <label class="booking-bar-label">יציאה</label>
+          <input type="date" class="booking-bar-input" aria-label="תאריך יציאה">
+        </div>
+        <div class="booking-bar-field">
+          <label class="booking-bar-label">אורחים</label>
+          <select class="booking-bar-input booking-bar-select" aria-label="מספר אורחים">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <button class="booking-bar-btn">הזמינו מקום</button>
       </div>
-      <div class="booking-bar-field">
-        <label class="booking-bar-label">יציאה</label>
-        <input type="date" class="booking-bar-input" aria-label="תאריך יציאה">
+      <div class="cta-policy">
+        <p>ביטול עד 30 יום — החזר מלא &middot; עד 14 יום — 50% &middot; פחות מ-14 יום — 75% חיוב</p>
+        <p>בחגים: ביטול עד 60 יום — החזר מלא &middot; עד 30 יום — 50% &middot; פחות מ-14 יום — 75% חיוב</p>
       </div>
-      <div class="booking-bar-field">
-        <label class="booking-bar-label">אורחים</label>
-        <select class="booking-bar-input booking-bar-select" aria-label="מספר אורחים">
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-      </div>
-      <button class="booking-bar-btn">הזמנה</button>
     </div>
   </section>
 
@@ -364,33 +363,6 @@
       <p class="modal-note">* תמלא כאן את המסעדות שאתה רוצה להמליץ עליהן</p>
     </div>
   </div>
-
-  <!-- Practical Info -->
-  <section class="practical-info">
-    <div class="practical-inner">
-      <div class="practical-col practical-col--booking">
-        <h2 class="practical-title">הזמינו חופשה בלב הערבה</h2>
-        <div class="practical-times">
-          <p>צ׳ק אין ב-15:00</p>
-          <p>צ׳ק אאוט ב-11:00</p>
-        </div>
-      </div>
-      <div class="practical-col practical-col--policy">
-        <div class="policy-block">
-          <h3 class="policy-heading">מדיניות ביטולים והחזרים:</h3>
-          <p>ביטול עד 30 יום ממועד האירוח: החזר מלא של המקדמה או שתוכלו להשאיר את המקדמה לזכותכם למועד אחר.</p>
-          <p>ביטול עד 14 ימים ממועד האירוח: החזר של 50% מסכום המקדמה.</p>
-          <p>ביטול של פחות מ-14 יום יחויב ב-75% מהעלות.</p>
-        </div>
-        <div class="policy-block">
-          <h3 class="policy-heading">ביטולים בחגים:</h3>
-          <p>ביטול עד 60 יום ממועד האירוח: החזר מלא של המקדמה.</p>
-          <p>ביטול עד 30 ימים ממועד האירוח: החזר של 50% מסכום המקדמה.</p>
-          <p>ביטול של פחות מ-14 יום יחויב ב-75% מהעלות.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="footer">
