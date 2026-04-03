@@ -264,9 +264,24 @@ a {
 /* ========== About ========== */
 .about {
   padding: 120px 24px 80px;
-  max-width: 700px;
+  max-width: 1152px;
   margin: 0 auto;
-  text-align: center;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-text-col {
+  text-align: right;
+}
+
+.about-text-col .section-label,
+.about-text-col .section-title {
+  text-align: right;
 }
 
 .about-subtitle {
@@ -280,14 +295,13 @@ a {
   font-size: 16px;
   line-height: 32px;
   color: var(--tobacco-80);
-  margin-bottom: 48px;
 }
 
 .about-text p {
   margin-bottom: 16px;
 }
 
-.about-image {
+.about-image-col {
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1077,8 +1091,8 @@ a {
   }
 
   .hero-logo-wrap {
-    width: 192px;
-    height: 192px;
+    width: 240px;
+    height: 240px;
   }
 
   .hero-tagline {
@@ -1156,6 +1170,28 @@ a {
 
   .booking-bar-btn {
     width: 100%;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-text-col,
+  .about-text-col .section-label,
+  .about-text-col .section-title {
+    text-align: center;
+  }
+
+  .breathing-img {
+    background-attachment: scroll;
+    height: 40vh;
+  }
+
+  .practical-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
   }
 
   .dining-grid {
