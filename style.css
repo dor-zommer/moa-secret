@@ -1149,147 +1149,42 @@ a {
     display: none !important;
   }
 
-  .header {
-    height: 64px;
-  }
+  /* --- Header --- */
+  .header { height: 64px; }
+  .logo-img { width: 56px; height: 56px; }
+  .nav-btn { font-size: 11px; padding: 6px 10px; }
 
-  .logo-img {
-    width: 56px;
-    height: 56px;
-  }
+  /* --- Hero --- */
+  .hero { min-height: 100vh; }
+  .hero-content { padding: 0 24px 40px; max-width: 100%; }
+  .hero-logo-wrap { width: 220px; height: 220px; margin-bottom: 20px; }
+  .hero-tagline { font-size: 16px; line-height: 26px; margin-bottom: 20px; }
+  .hero-dates { gap: 10px; }
+  .date-input { font-size: 13px; padding: 10px 8px; }
+  .date-label { font-size: 9px; }
 
-  .hero {
-    min-height: 100vh;
-  }
+  /* --- Sections shared --- */
+  .section-title { font-size: 26px; }
 
-  .hero-content {
-    padding-bottom: 48px;
-    max-width: 360px;
-  }
-
-  .hero-logo-wrap {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 24px;
-  }
-
-  .hero-tagline {
-    font-size: 15px;
-    line-height: 24px;
-    margin-bottom: 24px;
-  }
-
-  .hero-dates {
-    gap: 8px;
-    padding: 0 8px;
-  }
-
-  .date-input {
-    font-size: 12px;
-    padding: 6px 6px;
-  }
-
-  .date-label {
-    font-size: 9px;
-  }
-
-  .section-label {
-    font-size: 11px;
-    letter-spacing: 1px;
-  }
-
-  .section-title {
-    font-family: var(--font-serif);
-    font-size: 26px;
-  }
-
-  .about {
-    padding: 80px 20px 60px;
-  }
-
-  .about-inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
+  /* --- About --- */
+  .about { padding: 80px 24px 60px; }
+  .about-inner { grid-template-columns: 1fr; gap: 32px; }
   .about-text-col,
   .about-text-col .section-label,
-  .about-text-col .section-title {
-    text-align: center;
-  }
+  .about-text-col .section-title { text-align: center; }
 
-  .about-subtitle {
-    font-size: 17px;
-    line-height: 28px;
-    margin-bottom: 28px;
-  }
+  /* --- Accommodation --- */
+  .accommodation { padding: 64px 24px; }
+  .amenities { grid-template-columns: repeat(3, 1fr); gap: 20px 12px; }
 
-  .about-text {
-    font-size: 15px;
-    line-height: 28px;
-  }
-
-  .accommodation {
-    padding: 64px 20px;
-  }
-
-  .accommodation-desc {
-    font-size: 15px;
-    line-height: 28px;
-    margin: 0 auto 36px;
-  }
-
-  .amenities {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px 12px;
-  }
-
-  .amenity span {
-    font-size: 11px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 6px;
-  }
-
-  .gallery-grid-img--wide {
-    grid-column: span 2;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: dense;
-  }
-
-  .gallery-col {
-    display: contents;
-  }
-
-  .experience {
-    padding: 64px 20px;
-  }
-
-  .experience-text {
-    font-size: 15px;
-    line-height: 28px;
-    margin: 0 auto 40px;
-  }
-
-  .experience-gallery {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-flow: dense;
-  }
-
-  .exp-col {
-    display: contents;
-  }
-
-  .gallery-img--full {
-    grid-column: 1 / -1;
-    aspect-ratio: 16 / 9;
-  }
-
+  /* --- Galleries --- */
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
+  .gallery-grid-img--wide { grid-column: span 2; }
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-flow: dense; }
+  .gallery-col { display: contents; }
+  .experience-gallery { grid-template-columns: repeat(2, 1fr); grid-auto-flow: dense; }
+  .exp-col { display: contents; }
+  .gallery-img--full { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
   .gallery .gallery-img,
   .experience-gallery .gallery-img,
   .exp-col--1 .gallery-img:first-child,
@@ -1297,317 +1192,105 @@ a {
   .exp-col--2 .gallery-img:first-child,
   .exp-col--2 .gallery-img:nth-child(2),
   .exp-col--3 .gallery-img:first-child,
-  .exp-col--3 .gallery-img:nth-child(2) {
-    aspect-ratio: 3 / 4;
-  }
+  .exp-col--3 .gallery-img:nth-child(2) { aspect-ratio: 3 / 4; }
 
-  .booking {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0 20px;
-    margin-bottom: 48px;
-  }
+  /* --- Experience --- */
+  .experience { padding: 64px 24px; }
 
-  .booking-dates {
-    min-width: auto;
-  }
+  /* --- Mid-page booking --- */
+  .booking { flex-direction: column; align-items: stretch; padding: 0 24px; margin-bottom: 48px; }
+  .booking-dates { min-width: auto; }
+  .book-btn { width: 100%; }
 
-  .book-btn {
-    width: 100%;
-  }
+  /* --- Dark section --- */
+  .dark-cards { grid-template-columns: 1fr; }
+  .dark-card { min-height: 340px; }
+  .dark-title { font-size: 32px; }
+  .dark-subtitle { font-size: 13px; line-height: 22px; }
 
-  .dark-card {
-    min-height: 350px;
-  }
-
-  .dark-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .dark-title {
-    font-family: var(--font-serif);
-    font-size: 32px;
-  }
-
-  .dark-subtitle {
-    font-size: 13px;
-    line-height: 22px;
-  }
-
-  .cta-section {
-    padding: 64px 20px;
-  }
-
-  .cta-title {
-    font-family: var(--font-serif);
-    font-size: 28px;
-  }
-
-  .cta-subtitle {
-    font-size: 14px;
-    margin-bottom: 28px;
-  }
-
+  /* --- CTA / Booking bar --- */
+  .cta-section { padding: 60px 24px; }
+  .cta-title { font-size: 26px; }
+  .cta-subtitle { font-size: 14px; margin-bottom: 24px; }
   .booking-bar-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr 80px;
-    gap: 6px;
-    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: 340px;
     margin: 0 auto;
   }
+  .booking-bar-field { flex: 1 1 45%; min-width: 0; }
+  .booking-bar-field:nth-child(3) { flex: 0 0 100%; }
+  .booking-bar-label { font-size: 9px; }
+  .booking-bar-input { font-size: 13px; padding: 10px 10px; }
+  .booking-bar-select { padding: 10px 10px; }
+  .booking-bar-btn { width: 100%; padding: 12px 24px; }
+  .cta-policy { margin-top: 24px; }
+  .cta-policy p { font-size: 11px; line-height: 20px; }
 
-  .booking-bar-field {
-    min-width: auto;
-  }
+  /* --- Film gallery --- */
+  .film-gallery { padding: 64px 24px; }
 
-  .booking-bar-label {
-    font-size: 9px;
-    margin-bottom: 2px;
-  }
+  /* --- Dining --- */
+  .dining { padding: 64px 24px; }
+  .dining-grid { grid-template-columns: 1fr; gap: 16px; }
+  .dining-card { padding: 24px 16px; }
 
-  .booking-bar-input {
-    font-size: 12px;
-    padding: 6px 6px;
-  }
+  /* --- Booking bar standalone --- */
+  .booking-bar { padding: 48px 24px; }
 
-  .booking-bar-btn {
-    grid-column: 1 / -1;
-    width: 100%;
-    padding: 10px 24px;
-    margin-top: 4px;
-  }
+  /* --- Footer --- */
+  .footer { padding: 48px 24px; }
+  .footer-top { grid-template-columns: 1fr; gap: 28px; }
+  .footer-info { text-align: center; }
+  .footer-map { height: 200px; }
 
-  .cta-policy p {
-    font-size: 11px;
-    line-height: 20px;
-  }
+  /* --- Modal --- */
+  .modal-content { padding: 32px 20px; }
+  .modal-title { font-size: 20px; }
 
-  .film-gallery {
-    padding: 64px 20px;
-  }
-
-  .breathing-img {
-    background-attachment: scroll;
-    height: 40vh;
-  }
-
-  .dining {
-    padding: 64px 20px;
-  }
-
-  .dining-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .dining-card {
-    padding: 24px 16px;
-  }
-
-  .dining-card-title {
-    font-size: 13px;
-  }
-
-  .dining-card-text {
-    font-size: 12px;
-    line-height: 20px;
-  }
-
-  .booking-bar {
-    padding: 48px 20px;
-  }
-
-  .footer {
-    padding: 48px 20px;
-  }
-
-  .footer-top {
-    grid-template-columns: 1fr;
-    gap: 28px;
-  }
-
-  .footer-info {
-    text-align: center;
-  }
-
-  .footer-map {
-    height: 200px;
-  }
-
-  .footer-legal {
-    font-size: 12px;
-  }
-
-  .modal-content {
-    padding: 32px 20px;
-  }
-
-  .modal-title {
-    font-size: 20px;
-  }
+  .breathing-img { background-attachment: scroll; height: 40vh; }
 }
 
 @media (max-width: 480px) {
-  .hero-content {
-    padding-bottom: 36px;
-    max-width: 320px;
-  }
+  .nav-btn { font-size: 10px; padding: 6px 8px; }
+  .hero-content { padding: 0 16px 32px; }
+  .hero-logo-wrap { width: 180px; height: 180px; margin-bottom: 16px; }
+  .hero-tagline { font-size: 15px; line-height: 24px; }
+  .hero-dates { gap: 8px; }
+  .date-input { font-size: 12px; padding: 9px 6px; }
 
-  .hero-logo-wrap {
-    width: 160px;
-    height: 160px;
-    margin-bottom: 20px;
-  }
+  .section-title { font-size: 22px; }
+  .about { padding: 60px 16px 48px; }
+  .accommodation { padding: 48px 16px; }
+  .amenities { grid-template-columns: repeat(3, 1fr); gap: 16px 8px; }
+  .amenity span { font-size: 10px; }
 
-  .hero-tagline {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  .section-title {
-    font-size: 22px;
-  }
-
-  .about {
-    padding: 60px 16px 48px;
-  }
-
-  .about-subtitle {
-    font-size: 15px;
-    line-height: 26px;
-  }
-
-  .about-text {
-    font-size: 14px;
-    line-height: 26px;
-  }
-
-  .accommodation {
-    padding: 48px 16px;
-  }
-
-  .accommodation-desc {
-    font-size: 14px;
-    line-height: 26px;
-  }
-
-  .amenities {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px 8px;
-  }
-
-  .amenity span {
-    font-size: 10px;
-  }
-
-  .gallery-grid {
-    gap: 4px;
-  }
-
-  .gallery {
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
-  }
-
-  .experience {
-    padding: 48px 16px;
-  }
-
-  .experience-text {
-    font-size: 14px;
-    line-height: 26px;
-  }
-
-  .experience-gallery {
-    grid-template-columns: 1fr 1fr;
-    gap: 4px;
-  }
-
+  .gallery-grid { gap: 4px; }
+  .gallery { grid-template-columns: 1fr 1fr; gap: 4px; }
+  .experience { padding: 48px 16px; }
+  .experience-gallery { grid-template-columns: 1fr 1fr; gap: 4px; }
   .gallery-img--tall,
   .gallery-img--short,
   .gallery .gallery-img,
-  .experience-gallery .gallery-img {
-    aspect-ratio: 3 / 4;
-  }
+  .experience-gallery .gallery-img { aspect-ratio: 3 / 4; }
 
-  .hero-dates {
-    gap: 6px;
-  }
+  .booking { padding: 0 16px; margin-bottom: 40px; }
 
-  .date-input {
-    font-size: 11px;
-    padding: 5px 4px;
-  }
+  .dark-card { min-height: 280px; }
+  .dark-title { font-size: 26px; }
+  .dark-subtitle { font-size: 12px; line-height: 20px; }
+  .dark-card-content { padding: 24px 16px; }
 
-  .nav-btn {
-    font-size: 10px;
-    padding: 6px 8px;
-  }
+  .cta-section { padding: 48px 16px; }
+  .cta-title { font-size: 22px; }
+  .cta-subtitle { font-size: 13px; }
+  .booking-bar-inner { max-width: 300px; gap: 6px; }
+  .booking-bar-input { font-size: 12px; padding: 9px 8px; }
+  .booking-bar-btn { padding: 10px 20px; font-size: 11px; }
 
-  .dark-card {
-    min-height: 300px;
-  }
-
-  .dark-title {
-    font-family: var(--font-serif);
-    font-size: 26px;
-  }
-
-  .dark-subtitle {
-    font-size: 12px;
-    line-height: 20px;
-  }
-
-  .dark-card-content {
-    padding: 28px 20px;
-  }
-
-  .cta-section {
-    padding: 48px 16px;
-  }
-
-  .cta-title {
-    font-size: 24px;
-  }
-
-  .cta-subtitle {
-    font-size: 13px;
-    margin-bottom: 24px;
-  }
-
-  .booking-bar-inner {
-    grid-template-columns: 1fr 1fr 64px;
-    gap: 4px;
-  }
-
-  .booking-bar-input {
-    font-size: 11px;
-    padding: 5px 4px;
-  }
-
-  .booking-bar-btn {
-    padding: 9px 24px;
-    font-size: 11px;
-  }
-
-  .film-gallery {
-    padding: 48px 16px;
-  }
-
-  .dining {
-    padding: 48px 16px;
-  }
-
-  .booking {
-    padding: 0 16px;
-    margin-bottom: 40px;
-  }
-
-  .footer {
-    padding: 40px 16px;
-  }
-
-  .meta-item {
-    font-size: 12px;
-  }
+  .film-gallery { padding: 48px 16px; }
+  .dining { padding: 48px 16px; }
+  .footer { padding: 40px 16px; }
+  .meta-item { font-size: 12px; }
 }
