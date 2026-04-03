@@ -456,6 +456,16 @@ a {
   border-color: var(--pink);
 }
 
+/* ========== Booking CTA ========== */
+.booking-cta {
+  text-align: center;
+  padding: 48px 24px 64px;
+}
+
+.booking-cta .book-btn {
+  display: inline-block;
+}
+
 .book-btn:active {
   transform: scale(0.98);
 }
