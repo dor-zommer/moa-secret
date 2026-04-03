@@ -1145,6 +1145,10 @@ a {
 
 /* ========== Responsive ========== */
 @media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
   .header {
     height: 64px;
   }
