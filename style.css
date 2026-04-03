@@ -1156,7 +1156,7 @@ a {
 
   /* --- Hero --- */
   .hero { min-height: 100vh; }
-  .hero-content { padding: 0 24px 40px; max-width: 100%; }
+  .hero-content { padding-bottom: 40px; max-width: 340px; }
   .hero-logo-wrap { width: 220px; height: 220px; margin-bottom: 20px; }
   .hero-tagline { font-size: 16px; line-height: 26px; margin-bottom: 20px; }
   .hero-dates { gap: 10px; }
@@ -1198,7 +1198,7 @@ a {
   .experience { padding: 64px 24px; }
 
   /* --- Mid-page booking --- */
-  .booking { flex-direction: column; align-items: stretch; padding: 0 24px; margin-bottom: 48px; }
+  .booking { flex-direction: column; align-items: stretch; max-width: 340px; margin: 0 auto 48px; padding: 0 16px; }
   .booking-dates { min-width: auto; }
   .book-btn { width: 100%; }
 
@@ -1254,7 +1254,7 @@ a {
 
 @media (max-width: 480px) {
   .nav-btn { font-size: 10px; padding: 6px 8px; }
-  .hero-content { padding: 0 16px 32px; }
+  .hero-content { padding-bottom: 32px; max-width: 300px; }
   .hero-logo-wrap { width: 180px; height: 180px; margin-bottom: 16px; }
   .hero-tagline { font-size: 15px; line-height: 24px; }
   .hero-dates { gap: 8px; }
@@ -1275,7 +1275,7 @@ a {
   .gallery .gallery-img,
   .experience-gallery .gallery-img { aspect-ratio: 3 / 4; }
 
-  .booking { padding: 0 16px; margin-bottom: 40px; }
+  .booking { max-width: 300px; padding: 0 12px; margin: 0 auto 40px; }
 
   .dark-card { min-height: 280px; }
   .dark-title { font-size: 26px; }
