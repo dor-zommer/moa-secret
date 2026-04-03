@@ -1159,7 +1159,7 @@ a {
   .hero-content { padding-bottom: 40px; max-width: 340px; }
   .hero-logo-wrap { width: 220px; height: 220px; margin-bottom: 20px; }
   .hero-tagline { font-size: 16px; line-height: 26px; margin-bottom: 20px; }
-  .hero-dates { gap: 10px; }
+  .hero-dates { gap: 14px; }
   .date-input { font-size: 12px; padding: 6px 6px; }
   .date-label { font-size: 9px; }
 
@@ -1199,7 +1199,7 @@ a {
 
   /* --- Mid-page booking --- */
   .booking { flex-direction: column; align-items: stretch; max-width: 340px; margin: 0 auto 48px; padding: 0 16px; }
-  .booking-dates { min-width: auto; gap: 10px; }
+  .booking-dates { min-width: auto; gap: 14px; }
   .book-btn { width: 100%; }
 
   /* --- Dark section --- */
@@ -1215,7 +1215,7 @@ a {
   .booking-bar-inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 14px;
     max-width: 340px;
     margin: 0 auto;
   }
@@ -1285,7 +1285,7 @@ a {
   .cta-section { padding: 48px 16px; }
   .cta-title { font-size: 22px; }
   .cta-subtitle { font-size: 13px; }
-  .booking-bar-inner { max-width: 300px; gap: 10px; }
+  .booking-bar-inner { max-width: 300px; gap: 14px; }
   .booking-bar-input { font-size: 11px; padding: 5px 4px; }
   .booking-bar-btn { padding: 10px 20px; font-size: 11px; }
 
