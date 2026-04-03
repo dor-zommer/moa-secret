@@ -1176,12 +1176,17 @@ a {
   }
 
   .hero-dates {
+    gap: 8px;
     padding: 0 8px;
   }
 
   .date-input {
-    font-size: 13px;
-    padding: 10px 12px;
+    font-size: 12px;
+    padding: 8px 8px;
+  }
+
+  .date-label {
+    font-size: 9px;
   }
 
   .section-label {
@@ -1190,6 +1195,7 @@ a {
   }
 
   .section-title {
+    font-family: var(--font-serif);
     font-size: 26px;
   }
 
@@ -1315,6 +1321,7 @@ a {
   }
 
   .dark-title {
+    font-family: var(--font-serif);
     font-size: 32px;
   }
 
@@ -1328,6 +1335,7 @@ a {
   }
 
   .cta-title {
+    font-family: var(--font-serif);
     font-size: 28px;
   }
 
@@ -1339,11 +1347,20 @@ a {
   .booking-bar-inner {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
   }
 
   .booking-bar-field {
     min-width: auto;
+  }
+
+  .booking-bar-label {
+    font-size: 9px;
+  }
+
+  .booking-bar-input {
+    font-size: 13px;
+    padding: 10px 12px;
   }
 
   .booking-bar-btn {
@@ -1503,6 +1520,19 @@ a {
     aspect-ratio: 3 / 4;
   }
 
+  .hero-dates {
+    gap: 6px;
+  }
+
+  .date-input {
+    font-size: 11px;
+    padding: 7px 6px;
+  }
+
+  .date-label {
+    font-size: 8px;
+  }
+
   .nav-btn {
     font-size: 10px;
     padding: 6px 8px;
@@ -1513,6 +1543,7 @@ a {
   }
 
   .dark-title {
+    font-family: var(--font-serif);
     font-size: 26px;
   }
 
@@ -1538,9 +1569,13 @@ a {
     margin-bottom: 24px;
   }
 
+  .booking-bar-label {
+    font-size: 8px;
+  }
+
   .booking-bar-input {
-    font-size: 13px;
-    padding: 10px 12px;
+    font-size: 12px;
+    padding: 9px 10px;
   }
 
   .booking-bar-btn {
