@@ -1217,12 +1217,14 @@ a {
   .cta-subtitle { font-size: 14px; margin-bottom: 20px; }
   .booking-bar-inner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 12px;
     max-width: 100%;
     margin: 0 auto;
   }
-  .booking-bar-field { min-width: 0; width: 100%; }
+  .booking-bar-field { min-width: 0; flex: 1 1 calc(50% - 6px); }
+  .booking-bar-field:nth-child(3) { flex: 1 1 100%; }
   .booking-bar-label { font-size: 9px; }
   .booking-bar-input { font-size: 14px; padding: 12px 8px; width: 100%; }
   .booking-bar-select { padding: 12px 8px; width: 100%; }
