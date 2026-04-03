@@ -1201,9 +1201,9 @@ a {
   .experience { padding: 64px 24px; }
 
   /* --- Mid-page booking --- */
-  .booking { flex-direction: column; align-items: stretch; max-width: 260px; margin: 0 auto 48px; padding: 0; gap: 6px; }
-  .booking-dates { min-width: auto; gap: 10px; }
-  .book-btn { width: 100%; padding: 8px 20px; font-size: 11px; }
+  .booking { flex-direction: column; align-items: stretch; max-width: 100%; margin: 0 auto 48px; padding: 0 24px; gap: 12px; }
+  .booking-dates { min-width: auto; gap: 12px; }
+  .book-btn { width: 100%; padding: 12px 20px; font-size: 12px; }
 
   /* --- Dark section --- */
   .dark-cards { grid-template-columns: 1fr; }
@@ -1218,16 +1218,16 @@ a {
   .booking-bar-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 6px 10px;
-    max-width: 260px;
+    gap: 10px 12px;
+    max-width: 100%;
     margin: 0 auto;
   }
   .booking-bar-field { min-width: 0; }
   .booking-bar-field:nth-child(3) { grid-column: 1 / -1; }
-  .booking-bar-label { font-size: 8px; }
-  .booking-bar-input { font-size: 11px; padding: 4px 4px; }
-  .booking-bar-select { padding: 4px 4px; }
-  .booking-bar-btn { grid-column: 1 / -1; width: 100%; padding: 8px 20px; font-size: 11px; }
+  .booking-bar-label { font-size: 9px; }
+  .booking-bar-input { font-size: 14px; padding: 10px 8px; }
+  .booking-bar-select { padding: 10px 8px; }
+  .booking-bar-btn { grid-column: 1 / -1; width: 100%; padding: 12px 20px; font-size: 12px; }
   .cta-policy { margin-top: 24px; }
   .cta-policy p { font-size: 11px; line-height: 20px; }
 
