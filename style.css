@@ -406,17 +406,17 @@ a {
 /* ========== Booking ========== */
 .booking {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: center;
-  gap: 12px;
-  max-width: 512px;
+  gap: 16px;
+  max-width: 480px;
   margin: 0 auto 64px;
-  flex-wrap: wrap;
 }
 
 .booking-dates {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   flex: 1;
   min-width: 0;
   width: 100%;
@@ -424,6 +424,7 @@ a {
 
 .date-field--light {
   flex: 1;
+  min-width: 0;
 }
 
 .date-label--light {
