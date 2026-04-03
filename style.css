@@ -118,12 +118,25 @@ a {
   overflow: hidden;
 }
 
-.hero-bg {
+.hero-slideshow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide--active {
+  opacity: 1;
 }
 
 .hero-overlay {
@@ -149,8 +162,8 @@ a {
 }
 
 .hero-logo-wrap {
-  width: 256px;
-  height: 256px;
+  width: 300px;
+  height: 300px;
   margin-bottom: 24px;
 }
 
@@ -200,8 +213,8 @@ a {
 .date-input {
   width: 100%;
   padding: 11px 37px 11px 13px;
-  background: var(--white-10);
-  border: 1px solid var(--white-20);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 6px;
   backdrop-filter: blur(2px);
   color: var(--white);
@@ -924,8 +937,8 @@ a {
   }
 
   .hero-logo-wrap {
-    width: 192px;
-    height: 192px;
+    width: 240px;
+    height: 240px;
   }
 
   .hero-tagline {

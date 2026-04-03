@@ -26,7 +26,13 @@
 
   <!-- Hero -->
   <section class="hero">
-    <img src="assets/hero-bg.jpg" alt="סוד מדבר בלילה" class="hero-bg">
+    <div class="hero-slideshow">
+      <img src="assets/hero-bg.jpg" alt="סוד מדבר בלילה" class="hero-slide hero-slide--active">
+      <img src="assets/exp-sunset-group.jpg" alt="שקיעה במדבר" class="hero-slide">
+      <img src="assets/exp-aerial.jpg" alt="מבט אווירי" class="hero-slide">
+      <img src="assets/exp-oasis.jpg" alt="נוף" class="hero-slide">
+      <img src="assets/gallery-exterior.jpg" alt="חזית הבקתה" class="hero-slide">
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-logo-wrap">
@@ -317,5 +323,16 @@
     </div>
   </footer>
 
+  <script>
+    (function () {
+      var slides = document.querySelectorAll('.hero-slide');
+      var current = 0;
+      setInterval(function () {
+        slides[current].classList.remove('hero-slide--active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('hero-slide--active');
+      }, 6000);
+    })();
+  </script>
 </body>
 </html>
