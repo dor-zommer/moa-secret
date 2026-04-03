@@ -264,6 +264,30 @@
     </button>
   </section>
 
+  <!-- Booking Bar -->
+  <section class="booking-bar" style="background-image: url('assets/exp-cabin-night.jpg')">
+    <div class="booking-bar-overlay"></div>
+    <div class="booking-bar-inner">
+      <div class="booking-bar-field">
+        <label class="booking-bar-label">כניסה</label>
+        <input type="date" class="booking-bar-input" aria-label="תאריך כניסה">
+      </div>
+      <div class="booking-bar-field">
+        <label class="booking-bar-label">יציאה</label>
+        <input type="date" class="booking-bar-input" aria-label="תאריך יציאה">
+      </div>
+      <div class="booking-bar-field">
+        <label class="booking-bar-label">אורחים</label>
+        <select class="booking-bar-input booking-bar-select" aria-label="מספר אורחים">
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+      </div>
+      <button class="booking-bar-btn">הזמנה</button>
+    </div>
+  </section>
+
   <!-- Restaurants Modal -->
   <div id="restaurants-modal" class="modal" onclick="if(event.target===this)this.classList.remove('modal--open')">
     <div class="modal-content">
@@ -287,6 +311,33 @@
       <p class="modal-note">* תמלא כאן את המסעדות שאתה רוצה להמליץ עליהן</p>
     </div>
   </div>
+
+  <!-- Practical Info -->
+  <section class="practical-info">
+    <div class="practical-inner">
+      <div class="practical-col practical-col--booking">
+        <h2 class="practical-title">הזמינו חופשה בלב הערבה</h2>
+        <div class="practical-times">
+          <p>צ׳ק אין ב-15:00</p>
+          <p>צ׳ק אאוט ב-11:00</p>
+        </div>
+      </div>
+      <div class="practical-col practical-col--policy">
+        <div class="policy-block">
+          <h3 class="policy-heading">מדיניות ביטולים והחזרים:</h3>
+          <p>ביטול עד 30 יום ממועד האירוח: החזר מלא של המקדמה או שתוכלו להשאיר את המקדמה לזכותכם למועד אחר.</p>
+          <p>ביטול עד 14 ימים ממועד האירוח: החזר של 50% מסכום המקדמה.</p>
+          <p>ביטול של פחות מ-14 יום יחויב ב-75% מהעלות.</p>
+        </div>
+        <div class="policy-block">
+          <h3 class="policy-heading">ביטולים בחגים:</h3>
+          <p>ביטול עד 60 יום ממועד האירוח: החזר מלא של המקדמה.</p>
+          <p>ביטול עד 30 ימים ממועד האירוח: החזר של 50% מסכום המקדמה.</p>
+          <p>ביטול של פחות מ-14 יום יחויב ב-75% מהעלות.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
