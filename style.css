@@ -1199,7 +1199,7 @@ a {
 
   /* --- Mid-page booking --- */
   .booking { flex-direction: column; align-items: stretch; max-width: 340px; margin: 0 auto 48px; padding: 0 16px; }
-  .booking-dates { min-width: auto; }
+  .booking-dates { min-width: auto; gap: 10px; }
   .book-btn { width: 100%; }
 
   /* --- Dark section --- */
@@ -1215,7 +1215,7 @@ a {
   .booking-bar-inner {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 10px;
     max-width: 340px;
     margin: 0 auto;
   }
@@ -1285,7 +1285,7 @@ a {
   .cta-section { padding: 48px 16px; }
   .cta-title { font-size: 22px; }
   .cta-subtitle { font-size: 13px; }
-  .booking-bar-inner { max-width: 300px; gap: 6px; }
+  .booking-bar-inner { max-width: 300px; gap: 10px; }
   .booking-bar-input { font-size: 11px; padding: 5px 4px; }
   .booking-bar-btn { padding: 10px 20px; font-size: 11px; }
 
