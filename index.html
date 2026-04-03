@@ -424,7 +424,7 @@
 <script>
 (function() {
   var SIRVOY_ID = '8a52773f0fc8b594';
-  var BASE_URL = 'https://secured.sirvoy.com/book/' + SIRVOY_ID + '/';
+  var BASE_URL = 'https://secured.sirvoy.com/engine/book?id=' + SIRVOY_ID;
 
   document.querySelectorAll('.booking-submit').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
@@ -434,7 +434,7 @@
       var checkout = form.querySelector('.booking-checkout');
       var guests = form.querySelector('.booking-guests');
 
-      var url = BASE_URL + '?lang=he';
+      var url = BASE_URL + '&lang=he';
       if (checkin && checkin.value) url += '&checkin=' + checkin.value;
       if (checkout && checkout.value) url += '&checkout=' + checkout.value;
       if (guests && guests.value) url += '&adults=' + guests.value;
@@ -446,7 +446,7 @@
   document.querySelectorAll('.nav-btn[href="#book"]').forEach(function(link) {
     link.addEventListener('click', function(e) {
       e.preventDefault();
-      window.open(BASE_URL + '?lang=he', '_blank');
+      window.open(BASE_URL + '&lang=he', '_blank');
     });
   });
 })();
