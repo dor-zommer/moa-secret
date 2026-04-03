@@ -1350,8 +1350,10 @@ a {
 
   .booking-bar-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    grid-template-columns: 1fr 1fr 80px;
+    gap: 6px;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .booking-bar-field {
@@ -1360,16 +1362,19 @@ a {
 
   .booking-bar-label {
     font-size: 9px;
+    margin-bottom: 2px;
   }
 
   .booking-bar-input {
-    font-size: 13px;
-    padding: 8px 10px;
+    font-size: 12px;
+    padding: 6px 6px;
   }
 
   .booking-bar-btn {
     grid-column: 1 / -1;
     width: 100%;
+    padding: 10px 24px;
+    margin-top: 4px;
   }
 
   .cta-policy p {
@@ -1570,13 +1575,19 @@ a {
     margin-bottom: 24px;
   }
 
+  .booking-bar-inner {
+    grid-template-columns: 1fr 1fr 64px;
+    gap: 4px;
+  }
+
   .booking-bar-input {
     font-size: 11px;
-    padding: 7px 8px;
+    padding: 5px 4px;
   }
 
   .booking-bar-btn {
-    padding: 10px 32px;
+    padding: 9px 24px;
+    font-size: 11px;
   }
 
   .film-gallery {
