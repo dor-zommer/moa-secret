@@ -408,7 +408,8 @@ a {
   display: flex;
   gap: 8px;
   flex: 1;
-  min-width: 280px;
+  min-width: 0;
+  width: 100%;
 }
 
 .date-field--light {
@@ -1160,8 +1161,9 @@ a {
   .hero-content { padding-bottom: 40px; max-width: 280px; }
   .hero-logo-wrap { width: 220px; height: 220px; margin-bottom: 20px; }
   .hero-tagline { font-size: 16px; line-height: 26px; margin-bottom: 20px; }
-  .hero-dates { gap: 12px; }
-  .date-input { font-size: 11px; padding: 4px 4px; }
+  .hero-dates { flex-direction: column; gap: 8px; padding: 0 16px; }
+  .date-field { min-width: 0; }
+  .date-input { font-size: 14px; padding: 10px 8px; min-width: 0; -webkit-appearance: none; }
   .date-label { font-size: 9px; }
 
   /* --- Sections shared --- */

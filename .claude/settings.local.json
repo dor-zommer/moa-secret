@@ -18,7 +18,11 @@
       "Bash(mv \"הבקתה\" cabin)",
       "Bash(mv \"היד \" hand)",
       "Bash(mv \"חוויה \" experience)",
-      "Bash(mv \"לא לשימוש\" unused)"
+      "Bash(mv \"לא לשימוש\" unused)",
+      "Bash(git merge:*)",
+      "Bash(git stash:*)",
+      "Bash(git pull:*)",
+      "Bash(git push:*)"
     ]
   }
 }
