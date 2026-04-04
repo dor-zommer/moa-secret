@@ -407,11 +407,19 @@ a {
 .booking {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   gap: 16px;
-  max-width: 480px;
+  max-width: 640px;
   margin: 0 auto 64px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.sirvoy-embed {
+  width: 100%;
+  max-width: 560px;
+  margin-top: 16px;
 }
 
 .booking-dates {
