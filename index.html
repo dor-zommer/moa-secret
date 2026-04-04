@@ -55,17 +55,18 @@
       <p class="hero-tagline">להגדיר ״שקט״ מחדש</p>
       <div class="hero-dates">
         <div class="date-field">
-          <label class="date-label">יציאה</label>
+          <label class="date-label">כניסה</label>
           <div class="date-input-wrap">
-            <input type="date" class="date-input" aria-label="תאריך יציאה">
+            <input type="date" class="date-input hero-checkin" aria-label="תאריך כניסה">
           </div>
         </div>
         <div class="date-field">
-          <label class="date-label">כניסה</label>
+          <label class="date-label">יציאה</label>
           <div class="date-input-wrap">
-            <input type="date" class="date-input" aria-label="תאריך כניסה">
+            <input type="date" class="date-input hero-checkout" aria-label="תאריך יציאה">
           </div>
         </div>
+        <button class="hero-book-btn" onclick="scrollToBook()">הזמינו מקום</button>
       </div>
       <a href="#about" class="hero-scroll" aria-label="גלול למטה">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
@@ -147,12 +148,36 @@
     </div>
   </section>
 
-  <!-- Booking (Sirvoy Widget) -->
+  <!-- Booking -->
   <div id="book" class="booking">
     <p class="section-label">הזמנה</p>
     <h2 class="section-title">הזמינו מקום</h2>
-    <div class="sirvoy-embed">
-      <script async="" data-form-id="8a52773f0fc8b594" src="https://secured.sirvoy.com/widget/sirvoy.js" data-lang="he"></script>
+    <div class="booking-form">
+      <div class="booking-dates">
+        <div class="date-field date-field--light">
+          <label class="date-label date-label--light">כניסה</label>
+          <input type="date" class="date-input date-input--light book-checkin" aria-label="תאריך כניסה">
+        </div>
+        <div class="date-field date-field--light">
+          <label class="date-label date-label--light">יציאה</label>
+          <input type="date" class="date-input date-input--light book-checkout" aria-label="תאריך יציאה">
+        </div>
+      </div>
+      <div class="booking-row">
+        <div class="date-field date-field--light">
+          <label class="date-label date-label--light">מספר אורחים</label>
+          <select class="date-input date-input--light book-guests">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+      </div>
+      <a href="https://wa.me/972502760446" target="_blank" class="book-btn book-whatsapp-btn">
+        הזמינו מקום בוואטסאפ
+      </a>
+      <p class="booking-note">או התקשרו: <a href="tel:0502760446" class="booking-phone">050-276-0446</a></p>
     </div>
   </div>
 
@@ -416,34 +441,21 @@
 </script>
 
 <script>
-(function() {
-  var SIRVOY_ID = '8a52773f0fc8b594';
-  var BASE_URL = 'https://secured.sirvoy.com/engine/book?id=' + SIRVOY_ID;
+function scrollToBook() {
+  var heroCheckin = document.querySelector('.hero-checkin');
+  var heroCheckout = document.querySelector('.hero-checkout');
+  var bookCheckin = document.querySelector('.book-checkin');
+  var bookCheckout = document.querySelector('.book-checkout');
 
-  document.querySelectorAll('.booking-submit').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      var form = btn.closest('.booking, .cta-content');
-      var checkin = form.querySelector('.booking-checkin');
-      var checkout = form.querySelector('.booking-checkout');
-      var guests = form.querySelector('.booking-guests');
+  if (heroCheckin && heroCheckin.value && bookCheckin) {
+    bookCheckin.value = heroCheckin.value;
+  }
+  if (heroCheckout && heroCheckout.value && bookCheckout) {
+    bookCheckout.value = heroCheckout.value;
+  }
 
-      var url = BASE_URL + '&lang=he';
-      if (checkin && checkin.value) url += '&checkin=' + checkin.value;
-      if (checkout && checkout.value) url += '&checkout=' + checkout.value;
-      if (guests && guests.value) url += '&adults=' + guests.value;
-
-      window.open(url, '_blank');
-    });
-  });
-
-  document.querySelectorAll('.nav-btn[href="#book"]').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      window.open(BASE_URL + '&lang=he', '_blank');
-    });
-  });
-})();
+  document.getElementById('book').scrollIntoView({ behavior: 'smooth' });
+}
 </script>
 
 </body>

@@ -188,6 +188,7 @@ a {
   display: flex;
   gap: 12px;
   width: 100%;
+  flex-wrap: wrap;
   margin-bottom: 24px;
 }
 
@@ -238,6 +239,77 @@ a {
   filter: invert(1);
   opacity: 0.6;
   cursor: pointer;
+}
+
+.hero-book-btn {
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--pink);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.hero-book-btn:hover {
+  background: #c4176f;
+}
+
+.hero-book-btn:active {
+  transform: scale(0.98);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.booking-row {
+  width: 100%;
+}
+
+.book-whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--tobacco);
+  border: 1px solid var(--millbrook);
+  border-radius: 6px;
+  color: var(--pampas-bg);
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.book-whatsapp-btn:hover {
+  background: var(--millbrook);
+}
+
+.booking-note {
+  font-size: 13px;
+  color: var(--tobacco-60);
+  text-align: center;
+}
+
+.booking-phone {
+  color: var(--toast);
 }
 
 .hero-scroll {
